@@ -1,0 +1,51 @@
+{
+  "university": {
+    "features": [
+      "univname_freq",
+      "univname_label",
+      "cgpa_pct",
+      "admit_chance_index",
+      "profile_distance",
+      "department_label",
+      "grev",
+      "toeflscore",
+      "greq",
+      "specialization_freq",
+      "toppercgpa",
+      "specialization_label",
+      "department_freq",
+      "grea",
+      "industryexp"
+    ],
+    "best_config": {
+      "hidden": [
+        128,
+        64,
+        32
+      ],
+      "dropout": 0.3,
+      "l2": 0.0001,
+      "lr": 0.001
+    },
+    "threshold_for_label": 0.5
+  },
+  "graduate": {
+    "features": [
+      "admit_chance_index",
+      "toefl_score",
+      "sop"
+    ],
+    "best_config": {
+      "hidden": [
+        128,
+        64,
+        32
+      ],
+      "dropout": 0.3,
+      "l2": 0.0001,
+      "lr": 0.001
+    },
+    "threshold_for_label": 0.5
+  },
+  "graduate_target_threshold": 0.7
+}

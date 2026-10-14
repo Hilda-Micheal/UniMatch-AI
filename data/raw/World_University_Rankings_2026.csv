@@ -1,0 +1,58 @@
+university,country,region,university_type,qs_rank_2026,the_rank_2026,arwu_rank_2025,qs_score,the_score,arwu_score,qs_academic_rep,qs_employer_rep,qs_faculty_student,qs_citations,qs_intl_faculty,qs_intl_students,the_teaching,the_research_env,the_research_quality,the_industry,the_intl_outlook,founded,total_students,intl_students_pct,nobel_laureates,fields_medalists,ranked_in_all_3,avg_rank_all3,university_age_2026,data_sources
+MIT,USA,North America,Private,1.0,2.0,3.0,100.0,96.4,100.0,100.0,100.0,100.0,100.0,100.0,98.4,91.5,99.8,97.2,80.2,74.2,1861,11858,34,100,1,True,2.0,165,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Imperial College London,UK,Europe,Public,2.0,8.0,,99.2,86.1,,99.4,99.2,100.0,99.4,100.0,97.5,83.4,92.1,87.4,80.4,55.2,1907,19000,61,15,0,False,5.0,119,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Stanford University,USA,North America,Private,3.0,5.0,2.0,99.1,95.5,76.5,99.2,99.6,100.0,99.8,98.4,99.2,95.2,99.6,99.4,77.6,88.4,1885,17249,24,85,22,True,3.3,141,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+University of Oxford,UK,Europe,Public,4.0,1.0,6.0,98.9,97.0,72.4,99.6,99.8,100.0,96.2,100.0,98.4,97.8,98.4,95.8,78.8,66.4,1096,24000,41,72,0,True,3.7,930,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Harvard University,USA,North America,Private,5.0,5.0,1.0,98.8,95.5,100.0,99.8,99.8,100.0,97.6,88.2,99.2,95.4,99.2,97.4,79.2,77.4,1636,21000,25,162,4,True,3.7,390,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+University of Cambridge,UK,Europe,Public,6.0,3.0,4.0,98.4,96.2,83.2,99.4,99.6,100.0,95.8,100.0,99.2,96.4,98.8,96.2,78.4,68.4,1209,24500,38,121,1,True,4.3,817,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+ETH Zurich,Switzerland,Europe,Public,7.0,7.0,22.0,97.8,87.4,55.8,97.4,96.8,100.0,97.2,100.0,100.0,85.4,88.4,85.2,77.4,99.8,1855,24500,41,32,1,True,12.0,171,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+NUS Singapore,Singapore,Asia,Public,8.0,17.0,,97.2,84.6,,96.8,99.4,98.4,99.4,100.0,100.0,80.8,85.4,80.2,72.4,100.0,1905,40000,36,3,0,False,12.5,121,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+UCL,UK,Europe,Public,9.0,9.0,,97.0,86.0,,97.8,98.4,100.0,96.8,100.0,100.0,85.4,88.8,80.4,76.8,72.4,1826,39000,56,14,0,False,9.0,200,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Caltech,USA,North America,Private,10.0,7.0,9.0,96.8,87.4,65.8,96.4,96.2,100.0,100.0,88.4,91.2,85.4,99.2,97.4,72.4,60.0,1891,2240,32,46,6,True,8.7,135,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Univ of Chicago,USA,North America,Private,13.0,15.0,10.0,96.2,83.8,64.2,97.2,98.4,98.4,98.4,86.2,78.4,82.4,97.2,95.8,72.8,60.2,1890,17002,30,100,1,True,12.7,136,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Princeton University,USA,North America,Private,15.0,3.0,7.0,94.8,96.2,70.8,97.4,97.8,100.0,96.2,80.4,68.4,92.4,99.2,97.8,74.8,64.4,1746,8374,25,64,1,True,8.3,280,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Univ of Hong Kong,Hong Kong,Asia,Public,11.0,35.0,,96.2,76.8,,95.8,97.4,97.4,96.8,100.0,100.0,72.4,72.8,65.4,68.4,92.2,1911,30000,34,0,0,False,23.0,115,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+NTU Singapore,Singapore,Asia,Public,12.0,46.0,,95.4,71.2,,95.2,96.8,96.8,96.8,100.0,100.0,66.4,64.2,60.8,62.4,96.8,1991,33000,34,0,0,False,29.0,35,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Cornell University,USA,North America,Private,13.0,18.0,,95.2,83.2,,97.2,99.2,97.8,94.8,85.8,84.2,80.8,88.4,86.4,70.4,60.8,1865,24000,27,45,0,False,15.5,161,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Yale University,USA,North America,Private,16.0,9.0,14.0,94.4,86.0,60.8,97.6,98.4,100.0,92.4,80.4,74.8,83.4,95.8,96.2,74.4,64.2,1701,14500,21,65,1,True,13.0,325,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Columbia University,USA,North America,Private,14.0,20.0,8.0,95.0,81.8,66.8,97.2,98.8,97.4,95.8,88.4,88.4,78.4,90.4,90.2,72.4,72.4,1754,31000,47,101,0,True,14.0,272,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Univ of Pennsylvania,USA,North America,Private,12.0,14.0,,95.8,84.2,,96.8,99.2,97.4,95.8,86.8,88.2,82.2,92.4,88.4,72.4,60.4,1740,22000,21,8,0,False,13.0,286,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Univ of Melbourne,Australia,Oceania,Public,19.0,16.0,33.0,93.8,83.4,48.8,95.4,96.8,96.8,95.8,99.2,100.0,80.8,84.2,79.4,70.4,68.8,1853,52000,44,8,0,True,22.7,173,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Peking University,China,Asia,Public,14.0,13.0,,95.0,85.2,,96.8,94.8,94.4,95.8,86.4,82.4,84.4,90.4,86.4,76.4,62.4,1898,47000,12,6,0,False,13.5,128,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Tsinghua University,China,Asia,Public,20.0,12.0,,93.4,86.2,,96.2,97.4,96.8,96.8,82.4,74.4,85.4,89.4,84.4,78.4,62.8,1911,53000,10,8,0,False,16.0,115,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+UC Berkeley,USA,North America,Public,28.0,9.0,5.0,91.2,86.0,75.2,95.8,98.4,97.4,93.2,82.4,88.4,83.4,97.2,97.4,72.4,72.4,1868,43000,14,107,0,True,14.0,158,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Johns Hopkins University,USA,North America,Private,24.0,21.0,,92.2,80.8,,94.8,98.4,97.4,93.8,85.8,82.4,80.4,88.4,87.8,72.4,65.8,1876,26000,28,38,0,False,22.5,150,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Univ of Sydney,Australia,Oceania,Public,25.0,43.0,,92.0,71.6,,95.2,95.8,96.4,94.8,100.0,100.0,68.4,67.8,61.4,63.4,70.8,1850,73000,45,5,0,False,34.0,176,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Duke University,USA,North America,Private,26.0,22.0,,91.8,80.4,,95.2,97.8,97.4,92.8,82.4,78.4,78.8,88.4,86.8,70.4,62.4,1838,17000,27,13,0,False,24.0,188,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Univ of Toronto,Canada,North America,Public,29.0,22.0,24.0,91.0,80.4,53.8,95.4,97.8,95.4,93.2,90.4,88.4,79.4,87.8,85.4,70.4,74.4,1827,97000,27,10,0,True,25.0,199,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Univ of Michigan,USA,North America,Public,23.0,22.0,21.0,92.4,80.4,56.4,95.8,97.2,96.4,93.8,83.8,82.4,78.8,86.8,87.2,68.4,64.4,1817,47000,17,26,1,True,22.0,209,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Kings College London,UK,Europe,Public,31.0,44.0,,90.6,71.4,,93.4,95.4,96.4,90.8,100.0,100.0,67.8,66.4,61.4,63.4,73.8,1829,33000,50,12,0,False,37.5,197,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Univ of Manchester,UK,Europe,Public,35.0,63.0,,89.6,68.4,,93.2,93.8,92.8,88.4,100.0,98.4,61.4,60.8,55.4,56.4,72.8,1824,40000,44,25,0,False,49.0,202,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+McGill University,Canada,North America,Public,32.0,44.0,,90.4,71.4,,94.2,95.8,95.8,90.8,96.8,92.4,68.4,67.4,62.4,62.4,71.8,1821,40000,27,14,0,False,38.0,205,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Seoul National University,South Korea,Asia,Public,31.0,62.0,,90.6,68.6,,92.8,94.8,95.4,92.4,84.2,80.4,62.4,61.8,56.4,59.4,60.8,1946,28000,4,0,0,False,46.5,80,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Fudan University,China,Asia,Public,30.0,44.0,,90.8,71.4,,92.4,93.8,93.4,93.4,82.8,76.4,68.4,68.8,63.4,65.4,61.8,1905,45000,10,0,0,False,37.0,121,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Univ of Tokyo,Japan,Asia,Public,28.0,26.0,,91.2,79.8,,94.4,90.4,89.8,94.4,78.8,72.4,79.4,83.8,82.4,72.4,60.4,1877,28000,12,11,3,False,27.0,149,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Univ of Edinburgh,UK,Europe,Public,27.0,30.0,,91.4,78.4,,94.2,94.8,94.8,91.8,100.0,98.4,72.4,74.2,66.4,62.4,74.8,1583,38000,44,20,0,False,28.5,443,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+CUHK Hong Kong,Hong Kong,Asia,Public,36.0,47.0,,89.4,70.8,,91.4,93.4,93.8,91.4,100.0,100.0,66.4,65.2,59.4,60.4,90.4,1963,20000,38,0,0,False,41.5,63,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+UCLA,USA,North America,Public,40.0,22.0,,88.6,80.4,,93.4,97.2,95.8,91.8,79.8,76.4,79.4,84.8,85.4,68.4,62.8,1919,46000,14,17,0,False,31.0,107,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+UNSW Sydney,Australia,Oceania,Public,19.0,67.0,,93.8,67.4,,93.4,95.8,95.4,93.4,100.0,100.0,61.4,59.8,54.4,55.4,71.8,1949,65000,46,4,0,False,43.0,77,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Paris-Saclay University,France,Europe,Public,,17.0,13.0,,83.4,62.2,,,,,,,79.8,85.8,86.4,68.8,56.4,2015,48000,20,22,4,False,15.0,11,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+LSE,UK,Europe,Public,56.0,52.0,,86.4,70.2,,93.4,97.8,97.4,85.4,100.0,100.0,67.4,61.8,55.4,57.4,75.8,1895,12000,72,18,0,False,54.0,131,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Kyoto University,Japan,Asia,Public,51.0,38.0,,87.2,74.8,,90.4,85.4,83.8,91.4,75.4,68.4,73.4,77.8,76.4,66.4,59.4,1897,23000,13,11,3,False,44.5,129,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Univ of Amsterdam,Netherlands,Europe,Public,55.0,61.0,,86.6,68.8,,90.8,91.4,91.2,88.8,100.0,100.0,64.4,63.8,58.4,60.4,84.4,1632,39000,31,16,0,False,58.0,394,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+KAIST,South Korea,Asia,Public,83.0,134.0,,84.4,60.4,,88.4,90.4,90.8,88.4,80.4,74.4,53.4,50.8,47.4,49.4,68.4,1971,22000,15,0,0,False,108.5,55,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Australian National Univ,Australia,Oceania,Public,30.0,78.0,,90.8,66.4,,93.2,93.8,93.8,91.4,100.0,100.0,59.4,57.8,52.4,54.4,72.4,1946,24000,40,6,0,False,54.0,80,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Carnegie Mellon University,USA,North America,Private,65.0,27.0,,85.8,79.4,,93.4,98.4,96.8,92.4,78.4,72.4,80.4,82.4,86.8,67.4,62.4,1900,15818,50,21,1,False,46.0,126,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+NYU,USA,North America,Private,38.0,27.0,,89.2,79.4,,93.8,98.4,96.8,90.4,92.4,98.4,78.4,82.4,84.4,68.4,78.4,1831,27000,47,12,0,False,32.5,195,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Monash University,Australia,Oceania,Public,37.0,88.0,,89.4,64.2,,92.4,93.8,93.4,91.2,100.0,100.0,57.4,55.8,50.4,52.4,71.4,1958,86000,50,0,0,False,62.5,68,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Delft Univ of Technology,Netherlands,Europe,Public,47.0,51.0,,88.0,70.4,,90.4,90.8,90.4,90.4,100.0,100.0,66.4,65.2,60.4,62.4,84.4,1842,26000,38,0,0,False,49.0,184,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Univ of British Columbia,Canada,North America,Public,42.0,41.0,,88.4,73.4,,93.4,95.8,95.4,91.2,96.4,92.4,70.4,70.8,64.4,66.4,73.8,1908,68000,30,7,0,False,41.5,118,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Technical Univ of Munich,Germany,Europe,Public,37.0,34.0,45.0,89.2,76.4,44.8,91.4,93.8,93.4,91.8,100.0,100.0,72.4,72.8,66.4,68.4,77.8,1868,50000,29,4,0,True,38.7,158,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+LMU Munich,Germany,Europe,Public,54.0,32.0,42.0,86.8,77.4,45.8,89.8,90.4,90.8,88.4,96.4,92.4,73.8,75.4,70.4,68.4,72.8,1472,53000,13,13,0,True,42.7,554,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Univ of Sao Paulo,Brazil,Latin America,Public,96.0,143.0,81.0,83.4,59.2,33.4,87.4,88.8,88.4,87.4,70.4,66.4,50.4,49.8,46.4,48.4,44.4,1934,96000,3,1,0,True,106.7,92,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Univ of Cape Town,South Africa,Africa,Public,150.0,178.0,,78.4,55.8,,83.4,84.8,84.4,82.4,88.4,84.4,48.4,47.8,43.4,45.4,60.4,1829,29000,36,0,0,False,164.0,197,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+IIT Bombay,India,Asia,Public,118.0,351.0,,82.4,46.4,,84.4,88.4,88.8,85.4,54.4,52.4,37.4,36.8,32.4,34.4,40.4,1958,10000,5,0,0,False,234.5,68,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+KFUPM Saudi Arabia,Saudi Arabia,Middle East,Public,67.0,234.0,,85.4,51.4,,87.4,89.8,89.4,87.4,68.4,62.4,39.4,38.8,34.4,36.4,52.4,1963,10000,16,0,0,False,150.5,63,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Politecnico di Milano,Italy,Europe,Public,98.0,,,83.2,,,87.4,89.8,89.4,87.4,98.4,92.4,,,,,,1863,47000,21,0,0,False,98.0,163,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Univ of Warsaw,Poland,Europe,Public,284.0,251.0,,72.4,50.4,,78.4,74.8,75.4,74.4,72.4,68.4,41.4,40.8,37.4,39.4,56.4,1816,55000,14,0,0,False,267.5,210,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025
+Sunway University,Malaysia,Asia,Private,488.0,,,62.4,,,64.4,62.8,63.4,64.4,78.4,82.4,,,,,,1987,9000,80,0,0,False,488.0,39,QS Jun-2025 | THE Oct-2025 | ARWU Aug-2025

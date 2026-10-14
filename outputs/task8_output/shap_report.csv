@@ -1,0 +1,37 @@
+dataset,model,feature,mean_abs_shap
+graduate,DNN,admit_chance_index,0.35673953160274935
+graduate,DNN,toefl_score,0.02846778869254486
+graduate,DNN,sop,0.017280056517788026
+graduate,Logistic Regression,admit_chance_index,0.33776820948156966
+graduate,Logistic Regression,toefl_score,0.027427142324040768
+graduate,Logistic Regression,sop,0.004384070976051183
+university,DNN,univname_freq,0.06763538474548066
+university,DNN,cgpa_pct,0.06709414050209453
+university,DNN,profile_distance,0.06654673410533382
+university,DNN,univname_label,0.05505428006417739
+university,DNN,toeflscore,0.028030906837472395
+university,DNN,grev,0.025264011954729604
+university,DNN,greq,0.024228220146568506
+university,DNN,specialization_freq,0.0239406034212734
+university,DNN,admit_chance_index,0.017442307063397788
+university,DNN,department_label,0.01742605892170491
+university,DNN,industryexp,0.015438796796983428
+university,DNN,toppercgpa,0.013669486267740524
+university,DNN,grea,0.013574251254585883
+university,DNN,department_freq,0.0074818348739606605
+university,DNN,specialization_label,0.006816064723548094
+university,XGBoost,univname_freq,0.12574325147670032
+university,XGBoost,cgpa_pct,0.09103730912912823
+university,XGBoost,univname_label,0.07024755572180388
+university,XGBoost,profile_distance,0.039259020688482735
+university,XGBoost,toppercgpa,0.03152995091205663
+university,XGBoost,department_label,0.030586314270952406
+university,XGBoost,greq,0.024611902287421997
+university,XGBoost,specialization_freq,0.02436858299316129
+university,XGBoost,admit_chance_index,0.021792704255049943
+university,XGBoost,grev,0.01893643958932321
+university,XGBoost,industryexp,0.01859465757811946
+university,XGBoost,grea,0.017312996131819094
+university,XGBoost,specialization_label,0.011796620728362179
+university,XGBoost,toeflscore,0.011515719892084109
+university,XGBoost,department_freq,0.0105470551918222

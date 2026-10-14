@@ -1,0 +1,25 @@
+{
+  "university": [
+    "univname_freq",
+    "univname_label",
+    "cgpa_pct",
+    "admit_chance_index",
+    "profile_distance",
+    "department_label",
+    "grev",
+    "toeflscore",
+    "greq",
+    "specialization_freq",
+    "toppercgpa",
+    "specialization_label",
+    "department_freq",
+    "grea",
+    "industryexp"
+  ],
+  "graduate": [
+    "admit_chance_index",
+    "toefl_score",
+    "sop"
+  ],
+  "graduate_threshold": 0.7
+}
