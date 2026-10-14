@@ -32,7 +32,7 @@
 - University dataset: 15 of 28 features retained
 - Graduate dataset: 3 of 8 features retained
 
-## Known Limitations (be upfront about these in the report / viva)
+## Known Limitations 
 - No tuition/fee or country column in the merged dataset → Affordability Index is a resource-availability proxy, not real cost
 - Only a small share of applicant rows match a ranked university, so ranking-based features carry limited signal
 - `department`/`specialization` are extremely high-cardinality free-text fields — label/frequency encoding was used instead of one-hot to keep the matrix usable; this may lose some information a more careful text-embedding approach could capture

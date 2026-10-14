@@ -103,7 +103,7 @@ Python, pandas, NumPy, scikit-learn, XGBoost, TensorFlow/Keras, SHAP, LIME, matp
 
 ## Reports
 
-Documentation lives in `reports/`: the full project draft (`UniMatch_AI_Project_Draft.docx`), one report each for Tasks 4, 5 and 6, and a combined report for Practicals 7 and 8.
+Documentation lives in `reports/`: one report each for Tasks 4, 5 and 6, 7 and 8 ; And a final report including Tasks 1-3 (knowledge base, rule-based expert system, state-space search) and 9-10 (integration/deployment, Responsible-AI evaluation)
 
 ---
 
