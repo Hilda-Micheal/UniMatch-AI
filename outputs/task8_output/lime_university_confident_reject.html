@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divG3PYDDAC1KBIQ54"></div>
+        <div class="lime top_div" id="top_div38WJS1WDTS07DGG"></div>
         
         <script>
-        var top_div = d3.select('#top_divG3PYDDAC1KBIQ54').classed('lime top_div', true);
+        var top_div = d3.select('#top_div38WJS1WDTS07DGG').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["reject", "admit"], [0.9863364696502686, 0.01366352941840887]);
+            var pp = new lime.PredictProba(pp_svg, ["reject", "admit"], [0.9794302470937059, 0.020569752906294127]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["reject", "admit"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["greq > 169.00", 0.09648153446757439], ["profile_distance > 0.97", -0.06940036363942308], ["univname_label > 40.00", 0.0670732100369286], ["76.00 < cgpa_pct <= 83.50", 0.05649627103738538], ["industryexp <= 0.00", 0.05285790881541618], ["8.00 < toppercgpa <= 9.60", -0.04900279683917034], ["admit_chance_index > 0.60", 0.03386770838412469], ["grev > 157.00", 0.024788196369648404]], 1, exp_div);
+                exp.show([["univ_University_of_Texas_Austin <= 0.00", 0.26648548352912366], ["univ_University_of_California_San_Diego <= 0.00", 0.22809564184550024], ["univ_Stanford_University <= 0.00", 0.2271769661602074], ["univ_Georgia_Institute_of_Technology <= 0.00", 0.22633850735619565], ["univ_Massachusetts_Institute_of_Technology <= 0.00", 0.2252745276524408], ["univ_Princeton_University <= 0.00", 0.20191675913109525], ["univ_University_of_California_Santa_Barbara <= 0.00", 0.1978707760429196], ["univ_California_Institute_of_Technology <= 0.00", 0.08718474280824129]], 1, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_tabular([["greq", "170.00", 0.09648153446757439], ["profile_distance", "1.04", -0.06940036363942308], ["univname_label", "46.00", 0.0670732100369286], ["cgpa_pct", "82.00", 0.05649627103738538], ["industryexp", "0.00", 0.05285790881541618], ["toppercgpa", "8.90", -0.04900279683917034], ["admit_chance_index", "0.72", 0.03386770838412469], ["grev", "165.00", 0.024788196369648404]], 1, raw_div);
+            exp.show_raw_tabular([["univ_University_of_Texas_Austin", "0.00", 0.26648548352912366], ["univ_University_of_California_San_Diego", "0.00", 0.22809564184550024], ["univ_Stanford_University", "0.00", 0.2271769661602074], ["univ_Georgia_Institute_of_Technology", "0.00", 0.22633850735619565], ["univ_Massachusetts_Institute_of_Technology", "0.00", 0.2252745276524408], ["univ_Princeton_University", "0.00", 0.20191675913109525], ["univ_University_of_California_Santa_Barbara", "0.00", 0.1978707760429196], ["univ_California_Institute_of_Technology", "0.00", 0.08718474280824129]], 1, raw_div);
         
         </script>
         </body></html>

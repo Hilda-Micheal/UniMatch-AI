@@ -1,12 +1,15 @@
-pandas
-numpy
-joblib
-scikit-learn
-xgboost
-tensorflow
-shap
-lime
-matplotlib
-seaborn
-jupyter
-streamlit
+# Pinned to the environment the saved models were trained in (Python 3.14).
+# Pickled scikit-learn / XGBoost models and Keras files are not guaranteed to load under other versions.
+pandas==3.0.6
+numpy==2.5.4
+joblib==1.6.0
+scikit-learn==1.9.1
+xgboost==3.4.1
+tensorflow==2.22.0rc0
+shap==0.54.1
+lime==0.2.0.1
+matplotlib==3.11.2
+seaborn==0.13.2
+jupyter==1.1.1
+tabulate==0.10.0
+streamlit==1.66.0

@@ -11,6 +11,7 @@ Keep these paths and artifacts together when deploying:
 - `outputs/task5_output/feature_matrix_graduate.csv`
 - `outputs/task5_output/feature_matrix_university.csv`
 - `outputs/task5_output/university_features_full.csv`
+- `outputs/task5_output/category_encodings.json` (one-hot vocabularies and frequencies used to encode a new applicant)
 - `outputs/task6_output/models/` and evaluation report CSVs
 - `outputs/task7_output/dnn_config.json`, `dnn_*.keras`, and `dnn_scaler_*.pkl`
 - `outputs/task8_output/` for the saved XAI and fairness displays
@@ -47,15 +48,16 @@ longer while TensorFlow loads the saved network.
    make private applicant records public.
 2. In Streamlit Community Cloud, create an app from that repository and branch, set the main file
    path to `app.py`, and deploy from the repository root.
-3. Cloud installs dependencies from `requirements.txt`. Ensure the selected Python runtime and the
-   installed scikit-learn/XGBoost/TensorFlow versions can load the serialized models. Pickled
-   scikit-learn objects are not guaranteed to be compatible across library versions; use the same
-   versions used to train the artifacts, or retrain and export models in the deployment environment.
+3. Cloud installs dependencies from `requirements.txt`, which pins the exact versions the saved
+   models were trained with (Python 3.14; note `tensorflow==2.22.0rc0` is a pre-release). Select
+   Python 3.14 in the app's settings. Pickled scikit-learn objects are not guaranteed to be compatible
+   across library versions; if you change versions, rerun the notebooks (Tasks 5-8) in the deployment
+   environment to regenerate the artifacts.
 4. Review app logs after deployment. A missing model, scaler, or source CSV is reported explicitly
    in the app; restore the artifact rather than suppressing the error.
 
 The app checks whether the saved XGBoost pickles can be loaded before offering XGBoost in the model
-selector. If the installed XGBoost version cannot read an artifact, that option is disabled with a
+selector (sidebar → *Advanced*). If the installed XGBoost version cannot read an artifact, that option is disabled with a
 warning while the other saved classifiers remain available. Rerun Task 6 with the deployment
 environment's XGBoost version to regenerate compatible model artifacts.
 
@@ -65,8 +67,8 @@ applicant information to source control.
 ## Before sharing a public deployment
 
 - Confirm all required model artifacts are present and predictions complete for both ML and DNN.
-- Verify the installed libraries against the model-training environment. The current repository does
-  not include a lockfile or a recorded training-environment export.
+- Verify the installed libraries match the pinned versions in `requirements.txt` (the model-training
+  environment).
 - Explain that outputs are estimates based on historical/self-reported data and are not admission
   guarantees. Rankings are a 2026 snapshot.
 - Recommendations do **not** estimate tuition or affordability; no compatible fee data is included.

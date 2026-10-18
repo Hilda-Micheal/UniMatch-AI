@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divKSHKIYYN4MA3I24"></div>
+        <div class="lime top_div" id="top_divUVRBICZU319Z7HJ"></div>
         
         <script>
-        var top_div = d3.select('#top_divKSHKIYYN4MA3I24').classed('lime top_div', true);
+        var top_div = d3.select('#top_divUVRBICZU319Z7HJ').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["reject", "admit"], [0.4985554397568268, 0.5014445602431732]);
+            var pp = new lime.PredictProba(pp_svg, ["reject", "admit"], [0.4623879493759133, 0.5376120506240867]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["reject", "admit"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["0.34 < admit_chance_index <= 0.49", -0.24418725143224357], ["107.00 < toefl_score <= 112.00", 0.038602583804764785], ["sop > 4.00", 0.006390035224610946]], 1, exp_div);
+                exp.show([["lor <= 3.00", -0.13824863463596043], ["8.16 < cgpa <= 8.62", -0.10037745226398215], ["309.00 < gre_score <= 316.00", -0.08336974917730747], ["107.00 < toefl_score <= 112.00", 0.03907660542900471], ["2.50 < sop <= 3.50", 0.002673584528148397]], 1, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_tabular([["admit_chance_index", "0.46", -0.24418725143224357], ["toefl_score", "108.00", 0.038602583804764785], ["sop", "4.50", 0.006390035224610946]], 1, raw_div);
+            exp.show_raw_tabular([["lor", "3.00", -0.13824863463596043], ["cgpa", "8.46", -0.10037745226398215], ["gre_score", "315.00", -0.08336974917730747], ["toefl_score", "110.00", 0.03907660542900471], ["sop", "3.50", 0.002673584528148397]], 1, raw_div);
         
         </script>
         </body></html>

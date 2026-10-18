@@ -17,7 +17,7 @@ The project follows a 10-task computational-intelligence pipeline, from raw data
 | Task | Stage | Notebook | Main outputs |
 |------|-------|----------|--------------|
 | 4 | Data preparation & EDA | `Task4_Data_Preparation_EDA.ipynb` | Clean dataset, EDA charts, data-quality report |
-| 5 | Feature engineering & selection | `Task5_Feature_Engineering.ipynb` | Feature matrices, selected features |
+| 5 | Feature engineering & selection | `Task5_Feature_Engineering.ipynb` | Feature matrices with a saved train/val/test split, selected features, category encodings |
 | 6 | Machine learning models | `Task6_ML_Model_Development.ipynb` | Best model + scaler (`.pkl`), evaluation reports |
 | 7 | Deep learning (DNN) | `Task7_Deep_Learning_Model.ipynb` | `.keras` / `.h5` models, training history, DNN vs ML comparison |
 | 8 | Explainable AI | `Task8_Explainable_AI.ipynb` | SHAP, LIME, counterfactuals, trust scores, fairness report |
@@ -44,9 +44,9 @@ UniMatch-AI/
 │   ├── README.md
 │   └── raw/
 ├── notebooks/             # Tasks 4-8, run in order
-├── reports/               # per-task reports (.md)
+├── reports/               # per-task reports (.md) + model_fixes_and_app_update.md
 └── outputs/               # everything the notebooks generate
-    ├── task5_output/      # feature matrices, selected features
+    ├── task5_output/      # feature matrices, selected features, category_encodings.json
     ├── task6_output/      # ML models, scalers, evaluation reports
     ├── task7_output/      # DNN models, history, curves, comparisons
     └── task8_output/      # SHAP, LIME, counterfactuals, trust, fairness
@@ -87,18 +87,31 @@ The checked-in Task 5-8 artifacts are used for inference; the notebooks do not n
 python -m streamlit run app.py
 ```
 
-The app validates an applicant profile, engineers the model features using the training data's feature
-scales and encodings, and runs the saved ML and DNN models. It also scores historical university
-candidates, displays Task 5-8 evaluation and explainability outputs, and offers CSV recommendations and
-a downloadable HTML report. See [`DEPLOYMENT.md`](DEPLOYMENT.md) for hosted deployment requirements.
+The app has four tabs:
+
+- **Your profile**: a short, grouped form (grades, test scores, documents, experience, study plans) with
+  help text on every field. GRE total is computed from verbal + quantitative, and CGPA on any 4 / 10 / 100
+  scale is converted for the models.
+- **Your matches**: overall admission outlook, and the best-matching universities labelled Safe / Target /
+  Reach with admission chance, match score, profile fit and world rank. Every column is explained; the
+  results download as an HTML report or CSV.
+- **Why these results**: plain-language explanations of what helps and what holds the applicant back,
+  for the overall outlook and for any recommended university, plus explained SHAP, LIME, counterfactual,
+  trust-score and fairness outputs from Task 8.
+- **Model details**: Task 5-8 evaluation tables and plots with a metric glossary.
+
+Each estimate averages the selected ML model and the DNN; model choice is under *Advanced* in the
+sidebar. See [`DEPLOYMENT.md`](DEPLOYMENT.md) for hosted deployment requirements.
 
 ---
 
 ## Outputs at a glance
 
-**Task 6: ML models.** Logistic Regression, Decision Tree, Random Forest, SVM and XGBoost are compared in `evaluation_report_*.csv`. The best model per setting is saved with its scaler.
+**Task 6: ML models.** Logistic Regression, Decision Tree, Random Forest, SVM and XGBoost are compared in `evaluation_report_*.csv`. Task 5 saves a train / validation / test split (by applicant for the university data, so no applicant appears in more than one part); the best model per setting is chosen on validation ROC-AUC and reported on the untouched test rows. All models are saved with their scaler.
 
-**Task 7: Deep learning.** A DNN is trained for each setting. See `hyperparameter_report.csv`, `overfitting_check.csv`, `dnn_vs_ml_comparison.csv` and the plots `accuracy_loss_curves.png` and `dnn_roc_confusion.png`.
+**Task 7: Deep learning.** A DNN is trained for each setting. See `hyperparameter_report.csv`, `overfitting_check.csv`, `dnn_vs_ml_comparison.csv` and the plots `accuracy_loss_curves.png` and `dnn_roc_confusion.png`. The DNN is the best university model (test ROC-AUC 0.780 vs 0.760 for the best ML model); for the graduate setting Logistic Regression and the DNN are effectively tied (0.956 vs 0.946).
+
+**Training fixes.** The applicant-level split, the removal of a frequency-encoding leak, one-hot category encoding and validation-based model selection are documented, with before/after results, in [`reports/model_fixes_and_app_update.md`](reports/model_fixes_and_app_update.md).
 
 **Task 8: Explainable AI.**
 - **SHAP**: global summary and per-prediction waterfall plots
@@ -122,6 +135,8 @@ Python, pandas, NumPy, scikit-learn, XGBoost, TensorFlow/Keras, Streamlit, SHAP,
 ## Reports
 
 Documentation lives in `reports/`: one report each for Tasks 4, 5 and 6, 7 and 8 ; And a final report including Tasks 1-3 (knowledge base, rule-based expert system, state-space search) and 9-10 (integration/deployment, Responsible-AI evaluation)
+
+`reports/model_fixes_and_app_update.md` records the review of model training (problems found, fixes, before/after metrics) and the application redesign.
 
 ---
 

@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divRC8BDOQZ43W3K6E"></div>
+        <div class="lime top_div" id="top_divNOQR5WW8OX1PPFB"></div>
         
         <script>
-        var top_div = d3.select('#top_divRC8BDOQZ43W3K6E').classed('lime top_div', true);
+        var top_div = d3.select('#top_divNOQR5WW8OX1PPFB').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["reject", "admit"], [0.9970781342974198, 0.0029218657025802835]);
+            var pp = new lime.PredictProba(pp_svg, ["reject", "admit"], [0.998963275515356, 0.0010367244846439506]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["reject", "admit"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["admit_chance_index <= 0.34", -0.6597813202075636], ["toefl_score <= 103.00", -0.053834366941788815], ["sop <= 2.50", 0.018369849287613656]], 1, exp_div);
+                exp.show([["cgpa <= 8.16", -0.39281646021257194], ["gre_score <= 309.00", -0.35517756340970097], ["lor <= 3.00", -0.13965364613975595], ["toefl_score <= 103.00", -0.0874853304169942], ["sop <= 2.50", -0.030407290185970805]], 1, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_tabular([["admit_chance_index", "0.04", -0.6597813202075636], ["toefl_score", "93.00", -0.053834366941788815], ["sop", "2.00", 0.018369849287613656]], 1, raw_div);
+            exp.show_raw_tabular([["cgpa", "7.20", -0.39281646021257194], ["gre_score", "295.00", -0.35517756340970097], ["lor", "2.00", -0.13965364613975595], ["toefl_score", "93.00", -0.0874853304169942], ["sop", "2.00", -0.030407290185970805]], 1, raw_div);
         
         </script>
         </body></html>

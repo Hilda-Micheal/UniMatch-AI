@@ -1,34 +1,40 @@
 dataset,case,test_row,p_admit,actual,rule,weight
-university,confident admit,948,0.994062602519989,1,cgpa_pct > 83.50,0.21102257203607724
-university,confident admit,948,0.994062602519989,1,univname_freq > 0.04,0.12660656517088936
-university,confident admit,948,0.994062602519989,1,industryexp <= 0.00,0.06983170088887185
-university,confident admit,948,0.994062602519989,1,univname_label > 40.00,0.0691103715084233
-university,confident admit,948,0.994062602519989,1,greq > 169.00,0.0630437397210234
-university,confident admit,948,0.994062602519989,1,admit_chance_index > 0.60,0.03235936379209837
-university,confident admit,948,0.994062602519989,1,149.00 < grev <= 153.00,-0.02052016684721462
-university,confident admit,948,0.994062602519989,1,101.00 < toeflscore <= 106.00,-0.02008070310264376
-university,borderline,1158,0.5000351071357727,1,cgpa_pct <= 68.08,-0.18903201259386154
-university,borderline,1158,0.5000351071357727,1,univname_freq > 0.04,0.11749195898903386
-university,borderline,1158,0.5000351071357727,1,profile_distance <= 0.55,0.08671771318034838
-university,borderline,1158,0.5000351071357727,1,univname_label > 40.00,0.08094646544472771
-university,borderline,1158,0.5000351071357727,1,industryexp <= 0.00,0.052851224577740843
-university,borderline,1158,0.5000351071357727,1,478.00 < department_label <= 911.00,-0.042683434602660386
-university,borderline,1158,0.5000351071357727,1,grea <= 3.00,-0.04128264962209473
-university,borderline,1158,0.5000351071357727,1,162.00 < greq <= 166.00,-0.03519516649883178
-university,confident reject,1462,0.01366352941840887,0,greq > 169.00,0.09648153446757439
-university,confident reject,1462,0.01366352941840887,0,profile_distance > 0.97,-0.06940036363942308
-university,confident reject,1462,0.01366352941840887,0,univname_label > 40.00,0.0670732100369286
-university,confident reject,1462,0.01366352941840887,0,76.00 < cgpa_pct <= 83.50,0.05649627103738538
-university,confident reject,1462,0.01366352941840887,0,industryexp <= 0.00,0.05285790881541618
-university,confident reject,1462,0.01366352941840887,0,8.00 < toppercgpa <= 9.60,-0.04900279683917034
-university,confident reject,1462,0.01366352941840887,0,admit_chance_index > 0.60,0.03386770838412469
-university,confident reject,1462,0.01366352941840887,0,grev > 157.00,0.024788196369648404
-graduate,confident admit,46,0.9987952918629277,1,admit_chance_index > 0.69,0.5593782751662445
-graduate,confident admit,46,0.9987952918629277,1,toefl_score > 112.00,0.04768070025183178
-graduate,confident admit,46,0.9987952918629277,1,sop > 4.00,-0.010298622901874178
-graduate,borderline,82,0.5014445602431732,1,0.34 < admit_chance_index <= 0.49,-0.24418725143224357
-graduate,borderline,82,0.5014445602431732,1,107.00 < toefl_score <= 112.00,0.038602583804764785
-graduate,borderline,82,0.5014445602431732,1,sop > 4.00,0.006390035224610946
-graduate,confident reject,58,0.0029218657025802835,0,admit_chance_index <= 0.34,-0.6597813202075636
-graduate,confident reject,58,0.0029218657025802835,0,toefl_score <= 103.00,-0.053834366941788815
-graduate,confident reject,58,0.0029218657025802835,0,sop <= 2.50,0.018369849287613656
+university,confident admit,1762,0.9611837490745126,1,univ_University_of_Texas_Austin <= 0.00,0.24463329127847483
+university,confident admit,1762,0.9611837490745126,1,univ_University_of_Wisconsin_Madison <= 0.00,0.23708110719650405
+university,confident admit,1762,0.9611837490745126,1,univ_University_of_Illinois_Urbana_Champaign <= 0.00,0.23358744386713315
+university,confident admit,1762,0.9611837490745126,1,univ_Purdue_University <= 0.00,0.2324579763728757
+university,confident admit,1762,0.9611837490745126,1,univ_Georgia_Institute_of_Technology <= 0.00,0.23219356170765176
+university,confident admit,1762,0.9611837490745126,1,univ_Stanford_University <= 0.00,0.21831801633976636
+university,confident admit,1762,0.9611837490745126,1,univ_University_of_California_Santa_Barbara <= 0.00,0.21303401861120316
+university,confident admit,1762,0.9611837490745126,1,univ_Princeton_University <= 0.00,0.2110967361117638
+university,borderline,460,0.5,1,univ_University_of_Texas_Austin <= 0.00,0.2592804451050245
+university,borderline,460,0.5,1,univ_University_of_California_Santa_Barbara <= 0.00,0.2456551046465345
+university,borderline,460,0.5,1,univ_Georgia_Institute_of_Technology <= 0.00,0.2220678116187434
+university,borderline,460,0.5,1,univ_University_of_Pennsylvania <= 0.00,0.22176267443289907
+university,borderline,460,0.5,1,univ_University_of_California_San_Diego <= 0.00,0.22056769061562154
+university,borderline,460,0.5,1,univ_University_of_Massachusetts_Amherst <= 0.00,0.19681388538305095
+university,borderline,460,0.5,1,univ_University_of_North_Carolina_Chapel_Hill <= 0.00,0.18169071397064995
+university,borderline,460,0.5,1,univ_California_Institute_of_Technology <= 0.00,0.13778556744028933
+university,confident reject,8335,0.020569752906294127,0,univ_University_of_Texas_Austin <= 0.00,0.26648548352912366
+university,confident reject,8335,0.020569752906294127,0,univ_University_of_California_San_Diego <= 0.00,0.22809564184550024
+university,confident reject,8335,0.020569752906294127,0,univ_Stanford_University <= 0.00,0.2271769661602074
+university,confident reject,8335,0.020569752906294127,0,univ_Georgia_Institute_of_Technology <= 0.00,0.22633850735619565
+university,confident reject,8335,0.020569752906294127,0,univ_Massachusetts_Institute_of_Technology <= 0.00,0.2252745276524408
+university,confident reject,8335,0.020569752906294127,0,univ_Princeton_University <= 0.00,0.20191675913109525
+university,confident reject,8335,0.020569752906294127,0,univ_University_of_California_Santa_Barbara <= 0.00,0.1978707760429196
+university,confident reject,8335,0.020569752906294127,0,univ_California_Institute_of_Technology <= 0.00,0.08718474280824129
+graduate,confident admit,20,0.9995358386848048,1,cgpa > 9.05,0.3465668231511845
+graduate,confident admit,20,0.9995358386848048,1,gre_score > 325.00,0.3138565750291218
+graduate,confident admit,20,0.9995358386848048,1,toefl_score > 112.00,0.09840295233040575
+graduate,confident admit,20,0.9995358386848048,1,3.50 < lor <= 4.00,0.052539283800156766
+graduate,confident admit,20,0.9995358386848048,1,sop > 4.00,0.01946184814137277
+graduate,borderline,29,0.5376120506240867,1,lor <= 3.00,-0.13824863463596043
+graduate,borderline,29,0.5376120506240867,1,8.16 < cgpa <= 8.62,-0.10037745226398215
+graduate,borderline,29,0.5376120506240867,1,309.00 < gre_score <= 316.00,-0.08336974917730747
+graduate,borderline,29,0.5376120506240867,1,107.00 < toefl_score <= 112.00,0.03907660542900471
+graduate,borderline,29,0.5376120506240867,1,2.50 < sop <= 3.50,0.002673584528148397
+graduate,confident reject,3,0.0010367244846439506,0,cgpa <= 8.16,-0.39281646021257194
+graduate,confident reject,3,0.0010367244846439506,0,gre_score <= 309.00,-0.35517756340970097
+graduate,confident reject,3,0.0010367244846439506,0,lor <= 3.00,-0.13965364613975595
+graduate,confident reject,3,0.0010367244846439506,0,toefl_score <= 103.00,-0.0874853304169942
+graduate,confident reject,3,0.0010367244846439506,0,sop <= 2.50,-0.030407290185970805

@@ -1,63 +1,68 @@
 # XAI Report — Task 8
 
 ## Models explained
-| dataset    | ML model (Task 6 best)   | DL model     |   ML test AUC |   DNN test AUC |
-|:-----------|:-------------------------|:-------------|--------------:|---------------:|
-| university | XGBoost                  | DNN (Task 7) |        0.8005 |         0.7534 |
-| graduate   | Logistic Regression      | DNN (Task 7) |        0.9479 |         0.9504 |
+| dataset    | ML model (Task 6 best, by validation AUC)   | DL model     |   ML test AUC |   DNN test AUC |
+|:-----------|:--------------------------------------------|:-------------|--------------:|---------------:|
+| university | SVM                                         | DNN (Task 7) |        0.7602 |         0.7795 |
+| graduate   | Logistic Regression                         | DNN (Task 7) |        0.9558 |         0.9463 |
 
 ## SHAP — top features (mean |SHAP|)
-| dataset    | model               | feature            |   mean_abs_shap |
-|:-----------|:--------------------|:-------------------|----------------:|
-| graduate   | DNN                 | admit_chance_index |          0.3567 |
-| graduate   | DNN                 | toefl_score        |          0.0285 |
-| graduate   | DNN                 | sop                |          0.0173 |
-| graduate   | Logistic Regression | admit_chance_index |          0.3378 |
-| graduate   | Logistic Regression | toefl_score        |          0.0274 |
-| graduate   | Logistic Regression | sop                |          0.0044 |
-| university | DNN                 | univname_freq      |          0.0676 |
-| university | DNN                 | cgpa_pct           |          0.0671 |
-| university | DNN                 | profile_distance   |          0.0665 |
-| university | DNN                 | univname_label     |          0.0551 |
-| university | DNN                 | toeflscore         |          0.028  |
-| university | XGBoost             | univname_freq      |          0.1257 |
-| university | XGBoost             | cgpa_pct           |          0.091  |
-| university | XGBoost             | univname_label     |          0.0702 |
-| university | XGBoost             | profile_distance   |          0.0393 |
-| university | XGBoost             | toppercgpa         |          0.0315 |
+| dataset    | model               | feature                              |   mean_abs_shap |
+|:-----------|:--------------------|:-------------------------------------|----------------:|
+| graduate   | DNN                 | gre_score                            |          0.1194 |
+| graduate   | DNN                 | cgpa                                 |          0.0866 |
+| graduate   | DNN                 | toefl_score                          |          0.0614 |
+| graduate   | DNN                 | sop                                  |          0.0592 |
+| graduate   | DNN                 | lor                                  |          0.0485 |
+| graduate   | Logistic Regression | gre_score                            |          0.1462 |
+| graduate   | Logistic Regression | cgpa                                 |          0.1403 |
+| graduate   | Logistic Regression | lor                                  |          0.051  |
+| graduate   | Logistic Regression | toefl_score                          |          0.0396 |
+| graduate   | Logistic Regression | sop                                  |          0.0109 |
+| university | DNN                 | cgpa_pct                             |          0.0814 |
+| university | DNN                 | univ_University_of_Texas_Dallas      |          0.0616 |
+| university | DNN                 | admit_chance_index                   |          0.0542 |
+| university | DNN                 | univ_Arizona_State_University        |          0.0353 |
+| university | DNN                 | univ_University_of_Wisconsin_Madison |          0.027  |
+| university | SVM                 | cgpa_pct                             |          0.0472 |
+| university | SVM                 | admit_chance_index                   |          0.0385 |
+| university | SVM                 | univ_University_of_Texas_Dallas      |          0.0383 |
+| university | SVM                 | univ_University_of_Wisconsin_Madison |          0.0294 |
+| university | SVM                 | greq                                 |          0.0152 |
 
 ## LIME
 Three applicants per dataset (confident admit, borderline, confident reject): `lime_<dataset>_<case>.html`, `lime_<dataset>.png`, `lime_report.csv`.
 
 ## Counterfactual analysis (Graduate dataset)
-- Applicants predicted "not admitted": 42; a realistic change that flips the prediction was found for 40.
-- Most frequently needed improvements: cgpa (34), research (32), toefl_score (3).
+- Applicants predicted "not admitted": 41; a realistic change that flips the prediction was found for 40.
+- Most frequently needed improvements: cgpa (40), gre_score (2).
 
 ## Trust score
 | dataset    | trust_band   |   applicants |   accuracy |   mean_trust |
 |:-----------|:-------------|-------------:|-----------:|-------------:|
-| graduate   | Low          |            8 |      1     |        0.432 |
-| graduate   | Medium       |           32 |      0.781 |        0.624 |
-| graduate   | High         |           60 |      0.95  |        0.84  |
-| university | Low          |         2216 |      0.616 |        0.433 |
-| university | Medium       |         5697 |      0.719 |        0.604 |
-| university | High         |         2793 |      0.84  |        0.774 |
+| graduate   | Low          |            5 |      1     |        0.439 |
+| graduate   | Medium       |           33 |      0.818 |        0.627 |
+| graduate   | High         |           62 |      0.919 |        0.847 |
+| university | Low          |         2330 |      0.603 |        0.421 |
+| university | Medium       |         5294 |      0.682 |        0.603 |
+| university | High         |         3117 |      0.785 |        0.773 |
 
 ## Fairness assessment (proxy groups — no protected attributes in these datasets)
 | dataset    | attribute         | model               |   base_rate_gap |   demographic_parity_diff |   equal_opportunity_diff | flag   |
 |:-----------|:------------------|:--------------------|----------------:|--------------------------:|-------------------------:|:-------|
-| graduate   | research          | Logistic Regression |           0.525 |                     0.691 |                    0.335 | review |
-| graduate   | research          | DNN                 |           0.525 |                     0.669 |                    0.407 | review |
-| graduate   | university_rating | Logistic Regression |           0.347 |                     0.422 |                    0.222 | review |
-| graduate   | university_rating | DNN                 |           0.347 |                     0.406 |                    0.192 | review |
-| university | program           | XGBoost             |           0.006 |                     0.132 |                    0.123 | review |
-| university | program           | DNN                 |           0.006 |                     0.114 |                    0.136 | review |
-| university | is_ranked         | XGBoost             |           0.102 |                     0.085 |                    0.073 | ok     |
-| university | is_ranked         | DNN                 |           0.102 |                     0.047 |                    0.068 | ok     |
+| graduate   | research          | Logistic Regression |           0.525 |                     0.588 |                    0.242 | review |
+| graduate   | research          | DNN                 |           0.525 |                     0.61  |                    0.314 | review |
+| graduate   | university_rating | Logistic Regression |           0.347 |                     0.406 |                    0.222 | review |
+| graduate   | university_rating | DNN                 |           0.347 |                     0.422 |                    0.259 | review |
+| university | program           | SVM                 |           0.074 |                     0.097 |                    0.134 | review |
+| university | program           | DNN                 |           0.074 |                     0.1   |                    0.149 | review |
+| university | is_ranked         | SVM                 |           0.057 |                     0.105 |                    0.138 | review |
+| university | is_ranked         | DNN                 |           0.057 |                     0.095 |                    0.143 | review |
 
 ## Notes / limitations
 - All explanations are in original feature units; scaling is applied inside the prediction functions.
-- SHAP uses a model-agnostic explainer with 100 background rows on a sample of test applicants.
-- Label-encoded features (e.g. `univname_label`) have no natural order, so their SHAP/LIME direction should not be read as "higher is better".
-- Graduate dataset: `admit_chance_index` already contains SOP and TOEFL, so the separate `sop` / `toefl_score` features only add what the index does not capture — their individual signs can look counter-intuitive (e.g. a high SOP slightly lowering the prediction).
+- SHAP uses a model-agnostic explainer on a sample of test applicants (60 university / 100 graduate, with 25 / 100 background rows); the university sample is small because the selected SVM is slow to evaluate, so its SHAP ranking is indicative.
+- University, department and specialization are one-hot columns (`univ_*`, `dept_*`, `spec_*`); a column's SHAP value is the effect of applying to / coming from that particular category.
+- Graduate models use the raw applicant attributes (GRE, TOEFL, CGPA, SOP, LOR, research, university rating), so each attribute's SHAP value can be read directly.
+- Test rows are the Task 5 test split (by applicant for the University dataset); the explained ML model is the Task 6 model with the best validation ROC-AUC.
 - Fairness here uses available applicant groups only; a demographic fairness audit is part of Task 10.

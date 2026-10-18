@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divA66SGNGCKHZC2LR"></div>
+        <div class="lime top_div" id="top_divTIEW6NQS6AM0FF6"></div>
         
         <script>
-        var top_div = d3.select('#top_divA66SGNGCKHZC2LR').classed('lime top_div', true);
+        var top_div = d3.select('#top_divTIEW6NQS6AM0FF6').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["reject", "admit"], [0.4999648928642273, 0.5000351071357727]);
+            var pp = new lime.PredictProba(pp_svg, ["reject", "admit"], [0.5, 0.5]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["reject", "admit"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["cgpa_pct <= 68.08", -0.18903201259386154], ["univname_freq > 0.04", 0.11749195898903386], ["profile_distance <= 0.55", 0.08671771318034838], ["univname_label > 40.00", 0.08094646544472771], ["industryexp <= 0.00", 0.052851224577740843], ["478.00 < department_label <= 911.00", -0.042683434602660386], ["grea <= 3.00", -0.04128264962209473], ["162.00 < greq <= 166.00", -0.03519516649883178]], 1, exp_div);
+                exp.show([["univ_University_of_Texas_Austin <= 0.00", 0.2592804451050245], ["univ_University_of_California_Santa_Barbara <= 0.00", 0.2456551046465345], ["univ_Georgia_Institute_of_Technology <= 0.00", 0.2220678116187434], ["univ_University_of_Pennsylvania <= 0.00", 0.22176267443289907], ["univ_University_of_California_San_Diego <= 0.00", 0.22056769061562154], ["univ_University_of_Massachusetts_Amherst <= 0.00", 0.19681388538305095], ["univ_University_of_North_Carolina_Chapel_Hill <= 0.00", 0.18169071397064995], ["univ_California_Institute_of_Technology <= 0.00", 0.13778556744028933]], 1, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_tabular([["cgpa_pct", "67.00", -0.18903201259386154], ["univname_freq", "0.06", 0.11749195898903386], ["profile_distance", "0.35", 0.08671771318034838], ["univname_label", "47.00", 0.08094646544472771], ["industryexp", "0.00", 0.052851224577740843], ["department_label", "589.00", -0.042683434602660386], ["grea", "3.00", -0.04128264962209473], ["greq", "165.00", -0.03519516649883178]], 1, raw_div);
+            exp.show_raw_tabular([["univ_University_of_Texas_Austin", "0.00", 0.2592804451050245], ["univ_University_of_California_Santa_Barbara", "0.00", 0.2456551046465345], ["univ_Georgia_Institute_of_Technology", "0.00", 0.2220678116187434], ["univ_University_of_Pennsylvania", "0.00", 0.22176267443289907], ["univ_University_of_California_San_Diego", "0.00", 0.22056769061562154], ["univ_University_of_Massachusetts_Amherst", "0.00", 0.19681388538305095], ["univ_University_of_North_Carolina_Chapel_Hill", "0.00", 0.18169071397064995], ["univ_California_Institute_of_Technology", "0.00", 0.13778556744028933]], 1, raw_div);
         
         </script>
         </body></html>

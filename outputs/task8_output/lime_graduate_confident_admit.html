@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divUQQ01APCOD932WE"></div>
+        <div class="lime top_div" id="top_divZZSITPQVMLJA53H"></div>
         
         <script>
-        var top_div = d3.select('#top_divUQQ01APCOD932WE').classed('lime top_div', true);
+        var top_div = d3.select('#top_divZZSITPQVMLJA53H').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["reject", "admit"], [0.0012047081370722967, 0.9987952918629277]);
+            var pp = new lime.PredictProba(pp_svg, ["reject", "admit"], [0.00046416131519522175, 0.9995358386848048]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["reject", "admit"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["admit_chance_index > 0.69", 0.5593782751662445], ["toefl_score > 112.00", 0.04768070025183178], ["sop > 4.00", -0.010298622901874178]], 1, exp_div);
+                exp.show([["cgpa > 9.05", 0.3465668231511845], ["gre_score > 325.00", 0.3138565750291218], ["toefl_score > 112.00", 0.09840295233040575], ["3.50 < lor <= 4.00", 0.052539283800156766], ["sop > 4.00", 0.01946184814137277]], 1, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_tabular([["admit_chance_index", "0.96", 0.5593782751662445], ["toefl_score", "120.00", 0.04768070025183178], ["sop", "5.00", -0.010298622901874178]], 1, raw_div);
+            exp.show_raw_tabular([["cgpa", "9.92", 0.3465668231511845], ["gre_score", "340.00", 0.3138565750291218], ["toefl_score", "120.00", 0.09840295233040575], ["lor", "4.00", 0.052539283800156766], ["sop", "4.50", 0.01946184814137277]], 1, raw_div);
         
         </script>
         </body></html>
