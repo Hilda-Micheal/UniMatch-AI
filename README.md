@@ -8,7 +8,7 @@ UniMatch AI takes a student's academic profile and answers three questions:
 2. *Which of them fit my budget, ranking preference and goals?*
 3. *What is my chance of admission, and why?*
 
-The project follows a 10-task computational-intelligence pipeline, from raw data through classical ML, deep learning and Explainable AI (XAI). This repository contains the **data-science stages (Tasks 4-8)**: data preparation, feature engineering, ML models, a deep neural network, and explainability.
+The project follows a 10-task computational-intelligence pipeline, from raw data through classical ML, deep learning and Explainable AI (XAI). This repository contains the **data-science stages (Tasks 4-8)** and a Streamlit application that integrates their saved outputs into an applicant-facing workflow.
 
 ---
 
@@ -19,10 +19,11 @@ The project follows a 10-task computational-intelligence pipeline, from raw data
 | 4 | Data preparation & EDA | `Task4_Data_Preparation_EDA.ipynb` | Clean dataset, EDA charts, data-quality report |
 | 5 | Feature engineering & selection | `Task5_Feature_Engineering.ipynb` | Feature matrices, selected features |
 | 6 | Machine learning models | `Task6_ML_Model_Development.ipynb` | Best model + scaler (`.pkl`), evaluation reports |
-| 7 | Deep learning (DNN) | `Task7_Deep_Learning_Model_Development.ipynb` | `.keras` / `.h5` models, training history, DNN vs ML comparison |
+| 7 | Deep learning (DNN) | `Task7_Deep_Learning_Model.ipynb` | `.keras` / `.h5` models, training history, DNN vs ML comparison |
 | 8 | Explainable AI | `Task8_Explainable_AI.ipynb` | SHAP, LIME, counterfactuals, trust scores, fairness report |
+| 9 | Integrated application | `app.py` | Validated inputs, ML/DNN predictions, recommendations, explanations and HTML reports |
 
-Models are built for two settings, **university** and **graduate** (see `outputs/task5_outputs/feature_matrix_*.csv`).
+Models are built for two settings, **university** and **graduate** (see `outputs/task5_output/feature_matrix_*.csv`).
 
 Tasks 1-3 (knowledge base, rule-based expert system, state-space search) and 9-10 (integration/deployment, Responsible-AI evaluation) are described in the final report in `reports/` and are not part of this repository's notebooks.
 
@@ -33,6 +34,10 @@ Tasks 1-3 (knowledge base, rule-based expert system, state-space search) and 9-1
 ```
 UniMatch-AI/
 ├── README.md
+├── app.py                 # integrated Streamlit application
+├── .streamlit/
+│   └── config.toml        # consistent light theme and accessible color palette
+├── DEPLOYMENT.md          # local and hosted deployment instructions
 ├── requirements.txt
 ├── .gitignore
 ├── data/                  # input datasets (see data/README.md)
@@ -41,10 +46,10 @@ UniMatch-AI/
 ├── notebooks/             # Tasks 4-8, run in order
 ├── reports/               # per-task reports (.md)
 └── outputs/               # everything the notebooks generate
-    ├── task5_outputs/     # feature matrices, selected features
-    ├── task6_outputs/     # ML models, scalers, evaluation reports
-    ├── task7_outputs/     # DNN models, history, curves, comparisons
-    └── task8_outputs/     # SHAP, LIME, counterfactuals, trust, fairness
+    ├── task5_output/      # feature matrices, selected features
+    ├── task6_output/      # ML models, scalers, evaluation reports
+    ├── task7_output/      # DNN models, history, curves, comparisons
+    └── task8_output/      # SHAP, LIME, counterfactuals, trust, fairness
 ```
 
 ---
@@ -72,7 +77,20 @@ jupyter notebook
 
 Run the notebooks in `notebooks/` in order, Task 4 to Task 8. Each notebook reads the previous task's output from `outputs/`.
 
-If you only want to explore models and explanations, you can skip Tasks 4-5 and start at Task 6, since the feature matrices are already in `outputs/task5_outputs/`.
+If you only want to explore models and explanations, you can skip Tasks 4-5 and start at Task 6, since the feature matrices are already in `outputs/task5_output/`.
+
+### Run the application
+
+The checked-in Task 5-8 artifacts are used for inference; the notebooks do not need to be rerun:
+
+```bash
+python -m streamlit run app.py
+```
+
+The app validates an applicant profile, engineers the model features using the training data's feature
+scales and encodings, and runs the saved ML and DNN models. It also scores historical university
+candidates, displays Task 5-8 evaluation and explainability outputs, and offers CSV recommendations and
+a downloadable HTML report. See [`DEPLOYMENT.md`](DEPLOYMENT.md) for hosted deployment requirements.
 
 ---
 
@@ -89,7 +107,7 @@ If you only want to explore models and explanations, you can skip Tasks 4-5 and 
 - **Trust scores**: confidence in each prediction vs accuracy
 - **Fairness**: group-level metrics in `fairness_report.csv` and `fairness_by_group.csv`
 - **Permutation importance** and per-row **explainability dashboards**
-- Full write-up in `outputs/task8_outputs/xai_report.md`
+- Full write-up in `reports/xai_report.md`
 
 For the actual metrics, open the report CSVs; they are the source of truth for results.
 
@@ -97,7 +115,7 @@ For the actual metrics, open the report CSVs; they are the source of truth for r
 
 ## Tech stack
 
-Python, pandas, NumPy, scikit-learn, XGBoost, TensorFlow/Keras, SHAP, LIME, matplotlib, seaborn, Jupyter.
+Python, pandas, NumPy, scikit-learn, XGBoost, TensorFlow/Keras, Streamlit, SHAP, LIME, matplotlib, seaborn, Jupyter.
 
 ---
 
@@ -112,5 +130,3 @@ Documentation lives in `reports/`: one report each for Tasks 4, 5 and 6, 7 and 8
 - Models are trained on historical, self-reported and public data, so predictions are **estimates, not guarantees** of admission.
 - Applicant datasets can carry selection and reporting bias. The fairness analysis in Task 8 is a first audit, not a certification.
 - Rankings change every year; the rankings table is a 2026 snapshot.
-
-

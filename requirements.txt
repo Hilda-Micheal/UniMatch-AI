@@ -1,5 +1,6 @@
 pandas
 numpy
+joblib
 scikit-learn
 xgboost
 tensorflow
@@ -8,3 +9,4 @@ lime
 matplotlib
 seaborn
 jupyter
+streamlit
