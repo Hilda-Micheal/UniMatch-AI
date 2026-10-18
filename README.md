@@ -4,8 +4,8 @@
 
 UniMatch AI takes a student's academic profile and answers three questions:
 
-1. *Which universities am I eligible for?*
-2. *Which of them fit my budget, ranking preference and goals?*
+1. *My overall profile rating for admissions*
+2. *Which universities am I eligible for?*
 3. *What is my chance of admission, and why?*
 
 The project follows a 10-task computational-intelligence pipeline, from raw data through classical ML, deep learning and Explainable AI (XAI). This repository contains the **data-science stages (Tasks 4-8)** and a Streamlit application that integrates their saved outputs into an applicant-facing workflow.
